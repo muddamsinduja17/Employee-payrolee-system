@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main() 
+{
+    char id[20];
+    char name[50];
+    float basic, hra, da, deductions, gross, net;
+    printf("EMPLOYEE PAYROLL SYSTEM\n");
+
+    printf("Enter Employee ID: ");
+    scanf("%s", id);
+
+    printf("Enter Employee Name: ");
+    scanf("%s", name);
+
+    printf("Enter Basic Salary: ");
+    scanf("%f", &basic);
+
+    hra = basic * 0.20;
+    da = basic * 0.10;
+    deductions = basic * 0.05;
+
+    gross = basic + hra + da;
+    net = gross - deductions;
+
+    printf("\n----- PAYSLIP -----\n");
+    printf("Employee ID: %s\n", id);
+    printf("Employee Name: %s\n", name);
+    printf("Basic Salary: %.2f\n", basic);
+    printf("HRA: %.2f\n", hra);
+    printf("DA: %.2f\n", da);
+    printf("Deductions: %.2f\n", deductions);
+    printf("Gross Salary: %.2f\n", gross);
+    printf("Net Salary: %.2f\n", net);
+
+    return 0;
+}
